@@ -15,6 +15,8 @@
         android:ems="10"
         android:hint="Ingrese un entero"
         android:inputType="number"
+        android:minHeight="48dp"
+        android:textColorHint="#8D6E63"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,9 +34,12 @@
         android:id="@+id/etText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Ingrese texto"
         android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#8D6E63"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvInt" />
@@ -49,13 +54,12 @@
         app:layout_constraintTop_toBottomOf="@+id/etText" />
 
     <TextView
-        android:id="@+id/tvFrag"
+        android:id="@+id/tvSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="72dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.382"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvText" />
 
@@ -65,28 +69,31 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="40dp"
+        android:minHeight="48dp"
         android:text="Switch"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvSwitch"
         app:layout_constraintTop_toBottomOf="@+id/tvText" />
 
     <EditText
         android:id="@+id/etDecimal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="80dp"
         android:ems="10"
         android:hint="Ingrese decimal"
         android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColorHint="#8D6E63"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvFrag" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSwitch" />
 
     <TextView
         android:id="@+id/tvDecimal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -97,20 +104,32 @@
         android:id="@+id/btDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="64dp"
         android:text="Borrar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDecimal" />
 
     <Button
         android:id="@+id/btSave"
+        android:layout_width="211dp"
+        android:layout_height="49dp"
+        android:text="Guardar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btShow"
+        app:layout_constraintVertical_bias="0.436" />
+
+    <Button
+        android:id="@+id/btShow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="56dp"
-        android:text="Guardar"
+        android:layout_marginTop="64dp"
+        android:text="Mostrar datos"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toEndOf="@+id/btDelete"
         app:layout_constraintTop_toBottomOf="@+id/tvDecimal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
